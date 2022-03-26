@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title">Minhas Viagens</string>
+    <string name="franceTitle">França - Paris</string>
+    <string name="peruTitle">Peru - Machu Picchu</string>
+    <string name="japanTitle">Japão - Tokio</string>
+    <string name="myTripsButton">Minhas Viagens</string>
+</resources>
