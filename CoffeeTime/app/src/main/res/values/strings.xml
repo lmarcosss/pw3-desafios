@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CoffeeTime</string>
+    <string-array name="menuList">
+        <item>Sobre nós</item>
+        <item>Nossos produtos</item>
+        <item>Cupom de desconto</item>
+        <item>Galeria de fotos</item>
+    </string-array>
+    <string name="about_us">Silvio Santos Ipsum É fácil ou não éam? Vem pra lá, mah você vai pra cá. Agora vai, agora vem pra láamm. Ha haeeee. Hi hi. É com você Lombardiam. Você veio da caravana de ondeammm? É bom ou não éam? Um, dois três, quatro, PIM, entendeuam?
+
+Mah é a porta da esperançaam. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. O arriscam tuduam, valendo um milhão de reaisuam. É dinheiro ou não éam? É com você Lombardiam. Ma o Silvio Santos Ipsum é muitoam interesanteam. Com ele ma você vai gerar textuans ha haae.
+
+Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. É namoro ou amizadeemm? Wellintaaammmmmmmmm. Ma tem ou não tem o celular do milhãouamm? Ma vejam só, vejam só. Você veio da caravana de ondeammm?
+
+Mah você mora com o papai ou com a mamãem? É com você Lombardiam. Mah é a porta da esperançaam. Ma não existem mulher feiam, existem mulher que não conhece os produtos Jequitiamm. Ma vai pra lá. Mah ooooee vem pra cá. Vem pra cá.
+
+Wellintaaammmmmmmmm. Ma vale dérreaisam? Ma tem ou não tem o celular do milhãouamm? É fácil ou não éam? Valendo um milhão de reaisammm. Qual é a musicamm?</string>
+    <string name="cafe1">Cafe 1</string>
+    <string name="cafe2">Cafe 2</string>
+    <string name="cafe3">Cafe 3</string>
+    <string name="cafe_gelado">Cafe Gelado</string>
+    <string name="capuccino">Capuccino</string>
+    <string name="mocaccino">Mocaccino</string>
+</resources>
