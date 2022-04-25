@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Organic</string>
+    <string name="excluir">Excluir</string>
+    <string name="editar">Editar</string>
+    <string name="name">Nome</string>
+    <string name="description">Descrição</string>
+    <string name="amountValue">Preço</string>
+    <string name="providerName">Nome do fornecedor</string>
+    <string name="aboutFirstTitle">O QUE É UM PRODUTO ORGÂNICO?</string>
+    <string name="aboutFirstText">Um produto orgânico é “aquele obtido dentro de um sistema orgânico de produção agropecuária – ou extrativista sustentável – que beneficie o ecossistema local, proteja os recursos naturais, respeite as características socioeconômicas e culturais da comunidade local, preserve os direitos dos trabalhadores envolvidos e não utilize organismos geneticamente modificados nem químicos sintéticos” (essa é a definição de acordo com a Lei n° 10.831, de dezembro de 2003, que regula a agricultura orgânica no Brasil).</string>
+    <string name="aboutSecondTitle">ORGÂNICOS CUIDAM DAS PESSOAS...</string>
+    <string name="aboutSecondText">- Embora muitos estudos apresentam resultados variados, existe uma tendência geral a favor dos alimentos orgânicos quando o assunto é maior valor nutricional.
+
+- Existem evidências, ainda não conclusivas, de que o consumo de alimentos orgânicos possa contribuir com a redução do risco para síndrome metabólica (conjunto de fatores de risco para doenças cardiovasculares, diabetes, câncer, obesidade) e alergias alimentares
+
++ Sais minerais: por serem cultivados em terrenos mais ricos em matéria orgânica, absorvem mais água e sais minerais do solo
+
++ Vitamina C: nutriente essencial para a nossa imunidade, pele, defesa antioxidante, absorção de nutrientes e muito mais.
+
++ Antioxidantes: é a defesa da planta contra insetos e outros agentes agressores e, no nosso corpo, contribuem combatendo radicais livres.
+
+- Corpo livre de veneno: não há riscos dos danos relacionados ao consumo crônico de agrotóxicos</string>
+</resources>
