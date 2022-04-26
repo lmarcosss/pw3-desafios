@@ -16,6 +16,7 @@ import com.example.organic.dao.ProductDAO
 import com.example.organic.entity.Product
 import com.example.organic.view.EditProductActivity
 import com.example.organic.view.ProductsListActivity
+import com.google.android.material.snackbar.Snackbar
 import java.util.*
 
 class QueryLineAdapter: BaseAdapter {
@@ -61,12 +62,17 @@ class QueryLineAdapter: BaseAdapter {
         textViewProviderName.setText("Fornecedor: ${product.providerName.toString()}")
 
 
-        deleteButton.setOnClickListener {
+        deleteButton.setOnClickListener { view ->
             val productDAO: ProductDAO? = AppDatabase.getInstance(listProducts!!.applicationContext)?.productDAO()
             val products: List<Product> = productDAO!!.getAllProducts()
             val product = (products[position]) as Product
             productDAO?.delete(product)
             updateList(position)
+
+            val mensagem = "Produto excluído com sucesso!"
+            val snackBar = Snackbar.make(view, mensagem, Snackbar.LENGTH_LONG)
+            snackBar.setAction("OK", View.OnClickListener { snackBar.dismiss() })
+            snackBar.show()
         }
 
         editButton.setOnClickListener {
@@ -81,8 +87,6 @@ class QueryLineAdapter: BaseAdapter {
     }
 
     fun updateList(position: Int) {
-        val mensagem = "Produto excluído com sucesso!"
-        Toast.makeText(listProducts, mensagem, Toast.LENGTH_LONG).show()
         this.products.removeAt(position)
         notifyDataSetChanged()
     }

@@ -16,7 +16,7 @@
         app:counterEnabled="true"
         app:counterMaxLength="30"
         android:background="@null"
-        app:helperText="Deve ser um E-mail válido"
+        app:helperText="@string/emailHelper"
         app:helperTextTextColor="@color/purple_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:id="@+id/textInputEmail"
-            android:hint="E-mail"
+            android:hint="@string/email"
             android:maxLength="30"
             android:imeOptions="actionGo"
             android:inputType="textEmailAddress" />
@@ -43,7 +43,7 @@
         android:layout_marginEnd="1dp"
         android:background="@null"
         app:helperTextTextColor="@color/purple_700"
-        app:helperText="Senha deve ter no máximo 6 caracteres"
+        app:helperText="@string/passwordHelper"
         app:counterMaxLength="6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,7 @@
             android:maxLength="6"
             android:id="@+id/textInputPassword"
             android:layout_marginHorizontal="16dp"
-            android:hint="Senha" />
+            android:hint="@string/password" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -66,7 +66,7 @@
         android:layout_height="60dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="30dp"
-        android:text="Entrar"
+        android:text="@string/login"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,6 +1,7 @@
 package com.example.organic.view
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -12,6 +13,7 @@ import com.example.organic.R
 import com.example.organic.dao.AppDatabase
 import com.example.organic.dao.ProductDAO
 import com.example.organic.entity.Product
+import com.google.android.material.snackbar.Snackbar
 
 class EditProductActivity : AppCompatActivity() {
     var database: AppDatabase? = null
@@ -32,11 +34,11 @@ class EditProductActivity : AppCompatActivity() {
         actionBar!!.title = "Edição do Produto"
         actionBar.setDisplayHomeAsUpEnabled(true)
 
-        editTextName = findViewById<AppCompatEditText>(R.id.editTextName)
-        editTextDescription = findViewById<AppCompatEditText>(R.id.editTextDescription)
-        editTextProviderName = findViewById<AppCompatEditText>(R.id.editTextAmountValue)
-        editTextAmountValue = findViewById<AppCompatEditText>(R.id.editTextProviderName)
-        editButton = findViewById<AppCompatButton>(R.id.editProductButton)
+        editTextName = findViewById<AppCompatEditText>(R.id.textEditInputName)
+        editTextDescription = findViewById<AppCompatEditText>(R.id.textEditInputDescription)
+        editTextProviderName = findViewById<AppCompatEditText>(R.id.textEditInputProviderName)
+        editTextAmountValue = findViewById<AppCompatEditText>(R.id.textEditInputAmountValue)
+        editButton = findViewById<AppCompatButton>(R.id.editButton)
 
         product = intent.getSerializableExtra("product") as? Product
 
@@ -53,17 +55,20 @@ class EditProductActivity : AppCompatActivity() {
     }
 
     private fun editProduct() {
+        val snackBar = Snackbar.make(findViewById(android.R.id.content), "", Snackbar.LENGTH_LONG)
+        snackBar.setBackgroundTint(Color.RED)
+        snackBar.setAction("OK", View.OnClickListener { snackBar.dismiss() })
         if (editTextName?.getText().toString().trim { it <= ' ' } == "") {
-            Toast.makeText(applicationContext, "Nome é obrigatório!", Toast.LENGTH_LONG).show()
+            snackBar.setText("Nome é obrigatório!").show()
             editTextName?.requestFocus()
         } else if (editTextDescription?.getText().toString().trim { it <= ' ' } == "") {
-            Toast.makeText(applicationContext, "Descrição é obrigatório!", Toast.LENGTH_LONG).show()
+            snackBar.setText("Descrição é obrigatório!").show()
             editTextDescription?.requestFocus()
         } else if (editTextProviderName?.getText().toString().trim { it <= ' ' } == "") {
-            Toast.makeText(applicationContext, "Nome do fornecedor é obrigatório!", Toast.LENGTH_LONG).show()
+            snackBar.setText("Nome do fornecedor é obrigatório!").show()
             editTextProviderName?.requestFocus()
         } else if (editTextAmountValue?.getText().toString().trim { it <= ' ' } == "") {
-            Toast.makeText(applicationContext, "Preço é obrigatório!", Toast.LENGTH_LONG).show()
+            snackBar.setText("Preço é obrigatório!").show()
             editTextAmountValue?.requestFocus()
         } else {
             product?.name = editTextName?.getText().toString().trim { it <= ' ' }
@@ -78,16 +83,8 @@ class EditProductActivity : AppCompatActivity() {
     }
 
     fun showMessage() {
-        val msg = "Registro alterado com sucesso! "
-        //mostrando caixa de diálogo de sucesso
-        val alertDialog = AlertDialog.Builder(this)
-        alertDialog.setTitle(R.string.app_name)
-        alertDialog.setMessage(msg)
-        alertDialog.setPositiveButton("OK") { dialog, id -> // Forçando que o código retorne para a tela de consulta
-            val intent = Intent(applicationContext, ProductsListActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-        alertDialog.show()
+        val intent = Intent(applicationContext, ProductsListActivity::class.java)
+        intent.putExtra("editSuccess", true)
+        startActivity(intent)
     }
 }

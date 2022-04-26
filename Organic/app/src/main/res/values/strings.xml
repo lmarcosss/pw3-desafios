@@ -2,6 +2,7 @@
     <string name="app_name">Organic</string>
     <string name="excluir">Excluir</string>
     <string name="editar">Editar</string>
+    <string name="register">Cadastrar</string>
     <string name="name">Nome</string>
     <string name="description">Descrição</string>
     <string name="amountValue">Preço</string>
