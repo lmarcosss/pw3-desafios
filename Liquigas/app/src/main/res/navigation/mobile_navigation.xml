@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.liquigas.fragment.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_gas_list"
+            app:destination="@id/nav_gas_list" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_order_list"
+            app:destination="@id/nav_order_list" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_information"
+            app:destination="@id/nav_information" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gas_list"
+        android:name="com.example.liquigas.fragment.GasListFragment"
+        android:label="@string/choose_your_gas_canister"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_nav_gas_list_to_nav_payment"
+            app:destination="@id/nav_payment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_payment"
+        android:name="com.example.liquigas.fragment.PaymentFragment"
+        android:label="@string/payment"
+        tools:layout="@layout/fragment_item_list" />
+
+    <fragment
+        android:id="@+id/nav_order_list"
+        android:name="com.example.liquigas.fragment.OrderFragment"
+        android:label="@string/orders"
+        tools:layout="@layout/fragment_order_list" />
+
+    <fragment
+        android:id="@+id/nav_information"
+        android:name="com.example.liquigas.fragment.InformationFragment"
+        android:label="@string/information_title"
+        tools:layout="@layout/fragment_information" />
+</navigation>
